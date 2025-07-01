@@ -1,0 +1,46 @@
+.leftside{
+    width: 20vw;
+    height: 100%;
+    border-radius: 5px;
+    margin-left: 0.4vw;
+}
+.library{
+    width: 100%;
+    height: 10%;
+}
+.playlist{
+    height: 90%;
+    width: 100%;
+}
+.elements{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    width: 100%;
+    height: 100%;
+    padding: 2vw;
+    margin: 0;
+    background-color: var(--box-color);
+    overflow-y: auto;
+}
+.elements > div{
+    padding: 10px;
+    margin-bottom: 10px;
+    
+}
+.elements::-webkit-scrollbar{
+    width: 12px;
+}
+.elements::-webkit-scrollbar-thumb:hover{
+    border-radius: 0;
+}
+.elements::-webkit-scrollbar-track{
+    background: transparent;
+}
+.elements::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+.elements::-webkit-scrollbar-thumb:hover{
+    background: rgba(255, 255, 255, 0.5);
+}

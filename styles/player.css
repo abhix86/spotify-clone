@@ -1,0 +1,191 @@
+
+.cover{
+    height: 90%;
+    width: 4vw;
+    display: flex;
+    margin-left: 1vw;
+}
+.cover .music_cover{
+    height: 6%;
+    width: 50px;
+    border-radius: 4px;
+    position: absolute;
+}
+.cover .cover_tooltip img{
+    height: 20px;
+    width: 20px;
+    display: none;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-left: 25px;
+    margin-top: 3px;
+    padding-top: 3px;
+    opacity: 0.8;
+}
+.cover:hover .cover_tooltip .bttn{
+    display: block;
+}
+.cover_tooltip:hover{
+    transform: scale(1.06);
+    transition: transform 0.1s ease-out;
+}
+.cover_tooltip .collapse{
+    color:aliceblue;
+    position: absolute;
+    top: -42px;
+    height: 18px;
+    width: 50px;
+    font-size: 0.6rem;
+    background-color: var(--box-color);
+    opacity: 0;
+    border-radius: 0.5px;
+    padding-left: 8px;
+    padding-top: 4px;
+    margin-left: 4px;
+    margin-top: 23px;
+    visibility: hidden;
+    box-shadow: 5px 8px 8px 5px rgba(0, 0, 0, 0.4);
+}
+.cover_tooltip:hover .collapse{
+    visibility: visible;
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in 0.5s;
+}
+.title{
+    height: 35px;
+    width: 12vw;
+    margin-top: 5px;
+    margin-left: 70px;
+    position: fixed;
+    white-space: nowrap;
+    color: white;
+}
+
+.title .b_title{
+    height: 40%;
+    width: 100%;
+}
+.b_title{
+    font-size: 0.8rem;
+    overflow: hidden;
+    margin-left: 10px;
+}
+.b_title:hover{
+    text-decoration: underline !important;
+    cursor: pointer;
+}
+.title_card{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.6rem;
+}
+.w_c{
+    padding-top: 4px;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    color: white;
+    overflow: hidden;
+}
+.watch_card{
+    cursor: pointer;
+    opacity: 0.6;
+}
+.w_c img{
+    height: 8px;
+    width: 8px;
+    margin-top: 2px;
+    margin-right: 2px;
+    opacity: 0.6;
+}
+.a_c{
+    padding-top: 4px;
+    height: 100%;
+    width: 50%;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.watch_card:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+.w_c img:hover{
+    opacity: 1;
+}
+.a_c:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+#toggle-on{
+    display: none;
+}
+.overlay{
+    position: fixed;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    height: 660px;
+    z-index: 999;
+    opacity: 0;
+    display: none;
+}
+#toggle-on:checked ~ .overlay{
+    display: block;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+.ov_d{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: black;
+    opacity: 0.5;
+}
+.off{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--box-color);
+    opacity: 0;
+    z-index: 1;
+}
+.data_box{
+    position: absolute;
+    height: 90%;
+    width: 80%;
+    background-color: var(--box-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    overflow: hidden;
+}
+.circle{
+    height: 100px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: aqua;
+    position: absolute;
+    right: -80px;
+    top: 40%;
+    box-shadow: 10px 5px 900px 70px hsl(202, 88%, 51%, 0.8);
+
+}
+
+
+
+
+@media only screen and (max-width:600px){
+    .title{
+        margin-left: 60px;
+    }
+    .title_card{
+        gap: 10px;
+    }
+}
