@@ -406,7 +406,6 @@ input[type="range"]:hover::-webkit-slider-thumb {
 .vd_card{
     height: 80%;
     width: 100%;
-    background-color: cyan;
 }
 .now_playing .vd{
     height: 100%;
