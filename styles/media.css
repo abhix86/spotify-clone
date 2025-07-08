@@ -1,0 +1,15 @@
+@media screen and (max-width: 656px) {
+    .music_cover{
+        width: 25px;
+    }
+    .lower_box .title{
+        display: none;
+    }
+    .l_empty{
+        display: none;
+    }
+    .l_main{
+        width: 60%;
+
+    }
+}

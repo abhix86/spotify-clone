@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/styles//body/body_mid/middle.css">
     <link rel="stylesheet" href="/styles/body/body_right/preview.css">
     <link rel="stylesheet" href="styles/player.css">
+    <link rel="stylesheet" href="/styles/media.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -101,6 +102,64 @@
                 </div>
             </div>
             <div class="add">
+            </div>
+        </div>
+        <div class="l_mid">
+            <div class="l_top">
+                <div class="l_empty"></div>
+                <div class="l_main">
+                    <img class="a" src="/resources/main_buttons/shuffle-svgrepo-com.svg" alt="shuffle button">
+                    <img class="b" src="/resources/main_buttons/previous-track-button-svgrepo-com.svg" alt="previous button">
+                    <div class="pause">
+                        <input type="radio" name="hah" id="check">
+                        <label class="paused" for="check">
+                            <img class="p_img" src="/resources/main_buttons/pause-circle-fill-svgrepo-com.svg" alt="pause button">
+                        </label>
+
+                        <input type="radio" name="hah" id="un_check" checked>
+                        <label class="play" for="un_check">
+                            <img class="pla_img" src="/resources/main_buttons/play-circle-svgrepo-com.svg" alt="pause button">
+                        </label>
+                    </div>
+                    <img class="repeat" src="/resources/main_buttons/previous-track-button-svgrepo-com.svg" alt="next button">
+                    <img class="c"  src="/resources/main_buttons/repeat-svgrepo-com.svg" alt="repeat button">
+                </div>
+            </div>
+            <div class="l_down">
+                <p>1:48</p>
+                <input class="range" id="ranged" type="range" min="0" max="100" value="50">
+                <p>3:38</p>
+            </div>
+        </div>
+        <div class="l_end">
+            <div class="end_main">
+                <div class="a1">
+                    <input type="radio" class="a1b" id="bttn_func" name="buttons" value="1">
+                    <label for="bttn_func" class="aa">
+                        <img class="svg" src="/resources/main_buttons/play-square-svgrepo-com.svg">
+                        <span class="npv">Now Playing view</span>
+                    </label>
+                    <input type="radio" class="a2b" id="undo_func" name="buttons" value="1">
+                    <label for="undo_func" class="bb">
+                        <img src="/resources/main_buttons/play-square-svgrepo-com - Copy.svg">
+                    </label>
+                    <div class="now_playing">
+                        <div class="vd_card">
+                            <video class="vd" src="/resources/Untitled video - Made with Clipchamp (3).mp4" autoplay loop></video>
+                        </div>
+                        <div class="vd_overlay">
+                            
+                        </div>
+                        <!--Yet to implement-->
+                    </div>
+                </div>
+                <img src="/resources/main_buttons/mic(lyrics).svg">
+                <img src="/resources/main_buttons/queue-svgrepo-com (1).svg">
+                <img src="/resources/main_buttons/computer-cpu-device-electronic-monitor-pc-svgrepo-com.svg">
+                <img src="/resources/main_buttons/speaker-2-svgrepo-com.svg">
+                <input type="range" min="0" max="100" value="50" class="speaker">
+                <img src="/resources/main_buttons/miniplayer-svgrepo-com.svg">
+                <img src="/resources/main_buttons/full-screen-svgrepo-com.svg">
             </div>
         </div>
     </section>

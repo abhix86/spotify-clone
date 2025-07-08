@@ -6,43 +6,46 @@
 }
 .cover .music_cover{
     height: 60%;
-    width: 50px;
+    width: 70px;
     border-radius: 4px;
     position: absolute;
 }
 .cover .cover_tooltip img{
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     display: none;
     background-color: black;
     border: 2px solid black;
     border-radius: 50%;
-    margin-left: 25px;
+    margin-left: 30px;
     margin-top: 3px;
     padding-top: 3px;
-    opacity: 0.8;
+    opacity: 0.6;
+    position: fixed;
 }
 .cover:hover .cover_tooltip .bttn{
     display: block;
 }
 .cover_tooltip:hover{
+    opacity: 1;
     transform: scale(1.06);
     transition: transform 0.1s ease-out;
+    box-shadow: 20px 50px 80px 50px black;
 }
 .cover_tooltip .collapse{
     color:aliceblue;
     position: absolute;
     top: -42px;
-    height: 18px;
-    width: 50px;
-    font-size: 0.6rem;
+    height: 20px;
+    width: 60px;
+    font-size: 0.7rem;
     background-color: var(--box-color);
     opacity: 0;
     border-radius: 0.5px;
     padding-left: 8px;
-    padding-top: 4px;
-    margin-left: 4px;
-    margin-top: 23px;
+    padding-top: 3px;
+    margin-left: 8px;
+    margin-top: 20px;
     visibility: hidden;
     box-shadow: 5px 8px 8px 5px rgba(0, 0, 0, 0.4);
 }
@@ -55,20 +58,20 @@
     height: 35px;
     width: 12vw;
     margin-top: 5px;
-    margin-left: 70px;
+    margin-left: 6vw;
     position: fixed;
     white-space: nowrap;
     color: white;
 }
 
 .title .b_title{
-    height: 40%;
+    height: 60%;
     width: 100%;
 }
 .b_title{
-    font-size: 0.8rem;
+    font-size: 1rem;
     overflow: hidden;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .b_title:hover{
     text-decoration: underline !important;
@@ -77,10 +80,8 @@
 .title_card{
     height: 60%;
     width: 100%;
+    font-size: 0.7rem;
     display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: 0.6rem;
 }
 .w_c{
     padding-top: 4px;
@@ -88,7 +89,6 @@
     width: 50%;
     display: flex;
     color: white;
-    overflow: hidden;
 }
 .watch_card{
     cursor: pointer;
@@ -130,7 +130,7 @@
     height: 100vh;
     width: 100vw;
     height: 100vh;
-    z-index: 999;
+    z-index: 1;
     opacity: 0;
     display: none;
 }
@@ -162,7 +162,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 999;
     overflow: hidden;
 }
 .circle{
@@ -187,4 +187,229 @@
     .title_card{
         gap: 10px;
     }
+}
+
+.l_mid{
+    color: aliceblue;
+    margin-left: 20%;
+    height: 100%;
+    width: 60%;
+}
+.l_top{
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+.l_top img{
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+.l_top img:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.l_empty{
+    height: 100%;
+    width: 41%;
+}
+.l_main{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.l_main .a{
+    height: 18px;
+    width: 18px;
+}
+.l_main .repeat{
+    height: 18px;
+    width: 18px;
+}
+.pause{
+    opacity: 1;
+    background-color: aliceblue;
+    border-radius: 50%;
+    height: 80%;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pause:hover{
+    transform: scale(1.05);
+}
+.pause img{
+    transform: scale(none);
+    height: 20px;
+    width: 20px;
+    opacity: 1;
+}
+.repeat{
+    rotate: 180deg;
+}
+
+#check{
+    display: none;
+}
+#check:checked ~ .paused{
+    display: none;
+}
+#un_check{
+    display: none;
+}
+#un_check:checked ~ .play{
+    display: none;
+}
+.l_down{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.l_down p{
+    opacity: 0.8;
+    font-size: 0.8rem;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.l_down .range{
+    border: none;
+    margin-top: 0.6%;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+  width: 50%;
+  height: 4px;
+  background: #535353;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: white;
+  margin-top: -3px; 
+  opacity: 0;       
+  pointer-events: none; 
+  transition: opacity 0.2s ease;
+}
+
+/* Show thumb on hover */
+input[type="range"]:hover::-webkit-slider-thumb {
+  opacity: 0.68;
+  pointer-events: auto;
+}
+.l_end{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.end_main{
+    height: 60%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.end_main img{
+    height: 18px;
+    width: 18px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+.end_main img:hover{
+    opacity: 1;
+}
+.end_main .speaker{
+    width: 20%;
+    opacity: 1;
+}
+.end_main .speaker::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: white;
+  margin-top: -1px; 
+  opacity: 0.6;       
+  pointer-events: none; 
+  transition: opacity 0.2s ease;
+}
+.end_main .speaker:hover{
+    opacity: 1;
+}
+
+.now_playing{
+    position: fixed;
+    right: 0;
+    top: 50px;
+    height: 86%;
+    width: 20vw;
+    background-color: var(--box-color);
+    display: none;
+    z-index: -1;
+}
+.a1b {
+    display: none;
+}
+
+.npv{
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    padding-top: 7px;
+    padding-left: 6px;
+    background-color: var(--box-color);
+    height: 30px;
+    width: 125px;
+    opacity: 0.8;
+    margin-left: -60px;
+    display: none;
+}
+.aa:hover .npv{
+    display: block;
+}
+#bttn_func:checked ~ .aa{
+    display: none;
+}
+.bb{display: none;}
+#bttn_func:checked ~ .bb{
+    display: block;
+}
+.bb:hover .npv{display: block;}
+.a2b{display: none;}
+
+@keyframes slideIn{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.a1 #bttn_func:checked ~ .now_playing{
+    animation: slideIn 0.2s ease forwards;
+    display: block;
+}
+.vd_card{
+    height: 80%;
+    width: 100%;
+    background-color: cyan;
+}
+.now_playing .vd{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
