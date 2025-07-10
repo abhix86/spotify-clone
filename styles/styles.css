@@ -10,7 +10,7 @@ html, body {
     height: 100%;
 }
 :root{
-    --box-color: rgb(37, 37, 37);
+    --box-color: hsl(0, 0%, 6%);
 }
 body {
     font: none;
